@@ -123,7 +123,7 @@ public class NeuralNetwork
                 /* この時点でニューラルネットワークが作成される */
                 foreach( Layer layer in layers )
                 {
-                    foreach( LinkedListNode node in layer.nodes )
+                    foreach( Node node in layer.nodes )
                     {
                         foreach( Edge edge in node.inputs )
                         {

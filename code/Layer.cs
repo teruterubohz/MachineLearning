@@ -28,7 +28,7 @@ public class Layer
 
     public void InitWeight()
     {
-        foreach (LinkedListNode node in nodes)
+        foreach (Node node in nodes)
         {
             node.InitWeight();
         }
