@@ -29,18 +29,11 @@ namespace DetectApp
             labelName = LoadLabelName();
             // 初期化
             GraphInit();
-            // Pixelをクリア
-            for (int i = 0; i < pixel.Length; i++)
-            {
-                pixel[i] = 0.0;
-            }
-
         }
 
         // マウスのイベントハンドラ:マウスが動いた時に呼び出される
         private void pictureBox1_MouseMove( object sender, MouseEventArgs e)
         {
-            int a = 0;
             // 左ボタンが押されていたらマウスの軌跡を描画
             if(( Control.MouseButtons & MouseButtons.Left) == MouseButtons.Left)
             {
@@ -111,11 +104,6 @@ namespace DetectApp
             int px = x * 28 / pictureBox1.Width;
             int py = y * 28 / pictureBox1.Height;
             pixel[py * 28 + px] = 1.0;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
