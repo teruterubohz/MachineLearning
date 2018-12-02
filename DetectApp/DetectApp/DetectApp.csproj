@@ -45,6 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\code\Layer.cs">
+      <Link>Layer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\code\NeuralNetwork.cs">
+      <Link>NeuralNetwork.cs</Link>
+    </Compile>
+    <Compile Include="..\..\code\Node.cs">
+      <Link>Node.cs</Link>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
