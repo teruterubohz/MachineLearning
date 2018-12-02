@@ -127,7 +127,7 @@ namespace MachineLearning
             label = new double[num_data][];
             labelIndex = new int[num_data];
 
-            using (FileStream fsPixel = new FileStream(@"train-image.idx3-ubyte", FileMode.Open))
+            using (FileStream fsPixel = new FileStream(@"train-images-idx3-ubyte\train-images.idx3-ubyte", FileMode.Open))
             {
                 using (BinaryReader brPixel = new BinaryReader(fsPixel))
                 {
@@ -146,7 +146,7 @@ namespace MachineLearning
                     }
                 }
             }
-            using (FileStream fsLabel = new FileStream(@"train-lables.idx1-ubyte", FileMode.Open))
+            using (FileStream fsLabel = new FileStream(@"train-labels-idx1-ubyte\train-labels.idx1-ubyte", FileMode.Open))
             {
                 using (BinaryReader brLabel = new BinaryReader(fsLabel))
                 {
@@ -202,7 +202,7 @@ namespace MachineLearning
             x = Math.Min(1.0, Math.Max(0.0, x));
             x = pictureBox1.Width * x;
             y = Math.Min(1.0, Math.Max(0.0, y));
-            x = pictureBox1.Width * (1.0 - y);
+            y = pictureBox1.Height * (1.0 - y);
             int px1 = (int)x;
             int py1 = (int)y;
             Graphics g = pictureBox1.CreateGraphics();
